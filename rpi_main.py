@@ -211,8 +211,8 @@ def checkIfMarketClosed():
 
 while(True):
     if GPIO.input(19):
-        print("Button is pushed")
+        buttonPressed = 1
         whenBuzzerPressed()
         break
     else:
-        print("Button is released")
+        buttonPressed = 0
