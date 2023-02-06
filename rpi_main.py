@@ -214,4 +214,4 @@ while(True):
         whenBuzzerPressed()
         break
     else:
-        #print("Button is released")
+        print("Button is released")
