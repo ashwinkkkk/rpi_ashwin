@@ -18,6 +18,7 @@ mydb = mysql.connector.connect(
     password="Shz3DdFEW1",
     database="sql12594236"
 )
+cursor = mydb.cursor()
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
