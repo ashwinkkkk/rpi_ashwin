@@ -131,11 +131,13 @@ if data["field1"] > btc_price:
     print('Good forecast')
     forecast = 1
     GPIO.output(26, GPIO.HIGH)
+    GPIO.output(27, GPIO.LOW)
 else:
     # Bad forecast show red LED
     print('Bad forecast')
     forecast = 0
     GPIO.output(27, GPIO.HIGH)
+    GPIO.output(26, GPIO.LOW)
 
 
 def whenBuzzerPressed():
