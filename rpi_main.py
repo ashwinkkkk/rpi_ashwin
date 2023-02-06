@@ -23,6 +23,8 @@ cursor = mydb.cursor()
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(19, GPIO.IN)
+GPIO.setup(27, GPIO.OUT)
+GPIO.setup(26, GPIO.OUT)
 
 
 api_key = "635b91ace4743e0001ca260f"
@@ -128,10 +130,12 @@ if data["field1"] > btc_price:
     # Good forecast show green LED
     print('Good forecast')
     forecast = 1
+    GPIO.output(26, GPIO.HIGH)
 else:
     # Bad forecast show red LED
     print('Bad forecast')
     forecast = 0
+    GPIO.output(27, GPIO.HIGH)
 
 
 def whenBuzzerPressed():
