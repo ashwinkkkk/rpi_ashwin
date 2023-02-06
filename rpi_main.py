@@ -175,7 +175,7 @@ def whenBuzzerPressed():
         order = client.create_market_order(
             'BTC-USDT', Client.SIDE_SELL, size=0.0001)
         btc_now = getCurrentBtcPrice()
-        btc_now = btc_now + float(btc_now) + 50.0
+        btc_now = float(btc_now) + 50.0
         sql_insert_query = "INSERT INTO crypto_db (status, price, timestamp) VALUES('S'," + str(btc_now) + ", CURRENT_TIMESTAMP);"
         cursor.execute(sql_insert_query)
         mydb.commit()
